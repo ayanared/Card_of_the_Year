@@ -10,23 +10,22 @@ const calculate_card = () => {
   const reading_year = $('#reading_year').val()
 
   if (verify_values(birthday_month, birthday_day, reading_year)) {
-    let sum = birthday_month + birthday_day + reading_year
-    
-    while (sum > 22) {
-      sum_string = sum.toString()
-
-    }
-    console.log('values are valid')
-  } else 
+    let sum = parseInt(birthday_month) +
+      parseInt(birthday_day) +
+      parseInt(reading_year)
+    while (sum > 22)
+      sum = card_num(sum)
+    console.log(sum)
+  } else
     console.log('invalid')
 
 }
 
 const verify_values = (birthday_month, birthday_day, reading_year) => {
   let error_message = ''
-  let valid_month = false
-  let valid_day = false
-  let valid_year = false
+  let valid_month,
+    valid_day,
+    valid_year = false
 
   if (birthday_month >= 1 && birthday_month <= 12) {
     valid_day = true
@@ -47,4 +46,18 @@ const verify_values = (birthday_month, birthday_day, reading_year) => {
   }
   $('#error_message').html(error_message)
   return valid_day && valid_month && valid_year
+}
+
+const card_num = (num) => {
+  let value = parseInt(num),
+    sum = 0;
+
+  while (value) {
+    console.log(value)
+    console.log(sum)
+    sum += value % 10;
+    value = Math.floor(value / 10);
+  }
+
+  return (sum);
 }

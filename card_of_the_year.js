@@ -1,6 +1,5 @@
 $(document)
   .ready(function () {
-
     $('button').on('click', calculate_card)
   });
 
@@ -13,9 +12,10 @@ const calculate_card = () => {
     let sum = parseInt(birthday_month) +
       parseInt(birthday_day) +
       parseInt(reading_year)
-    while (sum > 22)
+    while (sum > 22){
       sum = card_num(sum)
-    console.log(sum)
+    }
+    show_card(sum)
   } else
     console.log('invalid')
 
@@ -53,11 +53,25 @@ const card_num = (num) => {
     sum = 0;
 
   while (value) {
-    console.log(value)
-    console.log(sum)
     sum += value % 10;
     value = Math.floor(value / 10);
   }
 
   return (sum);
+}
+
+const show_card = (card_num) => {
+  if (card_num == 22)
+    card_num = 0
+  //clear html
+  card = cards[card_num]
+  $('#card_info').empty()
+  //add image
+  const card_info = `
+  <p>your card of the year number is: ${card.num}</p>
+  <h2>${card.name}</h2>
+  <img src=${card.img_url} alt=${card.name}>
+  `
+  $('#card_info').append(card_info)
+  console.log(cards[card_num])
 }

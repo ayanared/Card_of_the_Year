@@ -67,7 +67,7 @@ const show_card = (card_num) => {
   card = cards[card_num]
   $('#card_info').empty()
   const card_info = `
-  <p>your card of the year number is: ${card.num}</p>
+  <p class="mt-3">your card of the year number is: ${card.num}</p>
   <h2>${card.name}</h2>
   <img src=${card.img_url} alt=${card.name}>
   `

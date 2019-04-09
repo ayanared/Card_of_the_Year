@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap.min.css">
   <title>Card of The Year</title>
 </head>
 
@@ -16,25 +18,34 @@
     <h1>Card of the Year</h1>
   </div>
 
-  <label for="month_of_birth" class="d-flex justify-content-center">Number of the month you were born</label>
-  <div class="input_group form-group d-flex justify-content-center">
-    <input id="month_of_birth" type="text" placeholder="Birthday Month" class="d-flex justify-content-center">
+  <div class="form-group row">
+    <div class="col-sm-3"></div>
+    <label for="month_of_birth" class="col-sm-3 col-form-label">Month of birth (1-12)</label>
+    <div class="col-sm-3">
+      <input id="month_of_birth" type="text" placeholder="Birthday Month" class="input_group form-control">
+    </div>
   </div>
 
-  <label for="day_of_birth" class="d-flex justify-content-center">Day of the month you were born</label>
-  <div class="input_group form-group d-flex justify-content-center">
-    <input id="day_of_birth" type="text" placeholder="Birthday Day">
+  <div class="form-group row">
+    <div class="col-sm-3"></div>
+    <label for="day_of_birth" class="col-sm-3 col-form-label">Day of birth (1-31)</label>
+    <div class="col-sm-3">
+      <input id="day_of_birth" type="text" placeholder="Birthday Day" class="input_group form-control">
+    </div>
   </div>
 
-  <label for="reading_year" class="d-flex justify-content-center">Year that you want your reading</label>
-  <div class="input_group form-group d-flex justify-content-center">
-    <input id="reading_year" type="text" placeholder="Year for Reading">
-  </div>
-  
+  <div class="form-group row">
+      <div class="col-sm-3"></div>
+      <label for="reading_year" class="col-sm-3 col-form-label">Year of Reading</label>
+      <div class="col-sm-3">
+        <input id="reading_year" type="text" placeholder="reading year" class="input_group form-control">
+      </div>
+    </div>
+
   <p id="error_message"></p>
   <br>
   <div class="get_reading d-flex justify-content-center">
-    <button>Get Card of the Year</button>
+    <button class="btn btn-primary">Get Card of the Year</button>
   </div>
   <div id="card_info">
 

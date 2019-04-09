@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Card of The Year</title>
 </head>
 
@@ -13,22 +15,34 @@
   <div class="title">
     <h1>Card of the Year</h1>
   </div>
-  <div class="input_group">
-    <input id="month_of_birth" type="text" placeholder="Birthday Month">
-    <input id="day_of_birth" type="text" placeholder="Birthday Day">
-    <input id="reading_year" type="text" placeholder="Year for Reading">
-    <p id="error_message"></p>
+
+  <label for="month_of_birth" class="d-flex justify-content-center">Number of the month you were born</label>
+  <div class="input_group form-group d-flex justify-content-center">
+    <input id="month_of_birth" type="text" placeholder="Birthday Month" class="d-flex justify-content-center">
   </div>
+
+  <label for="day_of_birth" class="d-flex justify-content-center">Day of the month you were born</label>
+  <div class="input_group form-group d-flex justify-content-center">
+    <input id="day_of_birth" type="text" placeholder="Birthday Day">
+  </div>
+
+  <label for="reading_year" class="d-flex justify-content-center">Year that you want your reading</label>
+  <div class="input_group form-group d-flex justify-content-center">
+    <input id="reading_year" type="text" placeholder="Year for Reading">
+  </div>
+  
+  <p id="error_message"></p>
   <br>
-  <div class="get_reading">
+  <div class="get_reading d-flex justify-content-center">
     <button>Get Card of the Year</button>
   </div>
   <div id="card_info">
-    
+
   </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="cards.js"></script>
 <script src="card_of_the_year.js"></script>
+
 </html>

@@ -1,4 +1,20 @@
+body {
+  background-color: #212F3C;
+  color: white;
+}
+
 #error_message {
   color: red;
   font-size: 10pt;
+}
+
+img {
+  border-radius: 15px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1, h2, p {
+  text-align: center;
 }

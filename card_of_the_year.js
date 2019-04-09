@@ -1,5 +1,6 @@
 $(document)
   .ready(function () {
+    $('#reading_year').val(new Date().getFullYear())
     $('button').on('click', calculate_card)
   });
 
@@ -63,10 +64,8 @@ const card_num = (num) => {
 const show_card = (card_num) => {
   if (card_num == 22)
     card_num = 0
-  //clear html
   card = cards[card_num]
   $('#card_info').empty()
-  //add image
   const card_info = `
   <p>your card of the year number is: ${card.num}</p>
   <h2>${card.name}</h2>
